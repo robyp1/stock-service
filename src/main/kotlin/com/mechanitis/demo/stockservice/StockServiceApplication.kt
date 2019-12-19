@@ -31,7 +31,7 @@ class RestController(private val stockService: StockService) {
 
 	@Service
 	class StockService{
-		//server per fare tornare ad ogni simbolo  sempre l'ultimo prezzo e poi i sucessivi
+		//serve per fare tornare ad ogni simbolo  sempre l'ultimo prezzo e poi i sucessivi
 		private val pricesForStock = ConcurrentHashMap<String, Flux<StockPrice>>()
 		private val log = LogFactory.getLog(javaClass);
 
